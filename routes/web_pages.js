@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     };
     var q = req.query.q || null;
     var currentPage = req.query.page || 1;
-    var limit = 2;
+    var limit = 10;
 
 	WebPage.findPaginated(conditions,function(err, web_pages){
 		console.log(web_pages);
