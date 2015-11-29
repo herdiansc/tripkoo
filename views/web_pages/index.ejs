@@ -36,15 +36,13 @@
                 <div class="list">
                     <div class="row">
                         <div class="col-sm-3">
-                            <a href="#">
-                                <img class="img-responsive" src="/images/300x250.png" alt="">
-                            </a>
+                            <img class="img-responsive" src="<%= web_pages.documents[i].image; %>" alt="" onerror='this.src="/images/300x250.png";'>
                         </div>
                         <div class="col-sm-9">
-                            <h3 class="list-title"><a href="<%= web_pages.documents[i].url; %>"><%= web_pages.documents[i].title; %></a></h3>
+                            <h3 class="list-title"><a href="<%= web_pages.documents[i].url; %>" target="_blank"><%= web_pages.documents[i].title; %></a></h3>
                             <h4 class="list-sub-title"><%= web_pages.documents[i].price; %></h4>
                             <p><%= web_pages.documents[i].description; %></p>
-                            <a class="btn btn-primary" href="<%= web_pages.documents[i].url; %>">Buka Situs</a>
+                            <a class="btn btn-primary" href="<%= web_pages.documents[i].url; %>" target="_blank">Buka Situs</a>
                         </div>
                     </div>
                 </div>
