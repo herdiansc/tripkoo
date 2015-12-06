@@ -6,10 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Cari paket wisata <%= q %> dan paket wisata lainnya">
     <meta name="author" content="">
 
     <title>Cari Paket Wisata <%= (q&&q || '' ); %> | <%= site.title; %></title>
+    <% if(canonical) { %>
+        <meta name="canonical" href="<%= canonical %>">
+    <% } %>
 
     <!-- Bootstrap Core CSS -->
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
@@ -22,20 +25,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <style type="text/css">
-        body {font-size: 15px;}
-        p {font-size:100%;}
-        .page-header {font-size:200%;font-weight: normal;}
-        .list-header {font-size: 160%;font-weight: normal;}
-        .list-title{font-size: 140%;margin-top:0px;font-weight: normal;}
-        .list-sub-title{font-size: 115%;font-weight: normal;}
-        .btn {border-radius: 0;}
-        .no-border {border-radius: 0 !important;}
-        .no-bg-color {background-color: transparent;}
-        .affiliate-widget {margin-bottom: 30px;}
-        .sidebar {width:300px;float:right;}
-    </style>
 
 </head>
 <body>

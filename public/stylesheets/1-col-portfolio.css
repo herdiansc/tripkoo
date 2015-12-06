@@ -11,3 +11,20 @@ body {
 footer {
     margin: 50px 0;
 }
+
+body {font-size: 15px;}
+p {font-size:100%;}
+.page-header {font-size:200%;font-weight: normal;text-transform: capitalize;}
+.list-header {font-size: 160%;font-weight: normal;text-transform: capitalize;}
+.list-title{font-size: 140%;margin-top:0px;font-weight: normal;}
+.list-sub-title{font-size: 115%;font-weight: normal;}
+.btn {border-radius: 0;}
+.no-border {border-radius: 0 !important;}
+.no-bg-color {background-color: transparent;}
+.affiliate-widget {margin-bottom: 30px;}
+.sidebar {width:300px;float:right;}
+
+@media screen and (max-width: 400px) {
+	.list-title {margin-top: 20px;line-height: 30px;}
+	.sidebar {float:none;margin: 0 auto;}
+}

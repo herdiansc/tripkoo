@@ -4,12 +4,12 @@
         <!-- Page Search -->
         <div class="row">
           <div class="col-md-12">
-            <h1 class="page-header">Paket Wisata<%= (q&&': '+q || '' ); %></h1>
+            <h1 class="page-header">Paket wisata<%= (q&&' '+q || '' ); %></h1>
             <form action="/search" method="GET">
             <div class="input-group">
                     <input type="text" class="form-control no-border" placeholder="Search for..." name="q" value="<%= q; %>">
                     <span class="input-group-btn">
-                        <button class="btn btn-default no-border" type="button">CARI</button>
+                        <button class="btn btn-default no-border" type="submit">CARI</button>
                     </span>
                 
             </div><!-- /input-group -->
@@ -21,7 +21,7 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-md-12">
-                <h2 class="list-header">Daftar Paket Wisata<%= (q&&': '+q || '' ); %></h2>
+                <h2 class="list-header">Daftar paket wisata<%= (q&&' '+q || '' ); %></h2>
             </div>
         </div>
         <!-- /.row -->
@@ -36,7 +36,7 @@
                 <div class="list">
                     <div class="row">
                         <div class="col-sm-3">
-                            <img class="img-responsive" src="<%= web_pages.documents[i].image; %>" alt="" onerror='this.src="/images/300x250.png";'>
+                            <img class="img-responsive" src="<%= site.static_host %>/images/<%= web_pages.documents[i]._id; %>.jpg" alt="<%= web_pages.documents[i].title; %>" onerror='this.src="/search/img?id=<%= web_pages.documents[i]._id %>&src=<%= web_pages.documents[i].image %>";' data-id="<%= web_pages.documents[i]._id; %>" data-img-original="<%= site.static_host %>/images/<%= web_pages.documents[i]._id; %>.jpg">
                         </div>
                         <div class="col-sm-9">
                             <h3 class="list-title"><a href="<%= web_pages.documents[i].url; %>" target="_blank" rel="nofollow" target="_blank"><%= web_pages.documents[i].title; %></a></h3>
