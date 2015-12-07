@@ -7,7 +7,7 @@ module.exports = {
 	    title: 'XplOOor',
 	    url: 'http://xplooor.com',
 	    slogan: 'Cari Paket Wisata di Seluruh Indonesia',
-	    description: 'Selamat datang di tripkoo. Cari dan temukan paket wisata terbaik dan termurah ke seluruh indonesia.',
+	    description: 'Cari dan temukan paket wisata terbaik dan termurah ke seluruh indonesia.',
 	    static_host: '/images'
 	},
 	folders: {
