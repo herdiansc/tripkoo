@@ -18,7 +18,7 @@ Note: Please use our back link in your site (webthemez.com)
 <meta name="description" content="<%= site.description; %>">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-<meta property="og:url" content="http://www.tripkoo.com/">
+<meta property="og:url" content="<%= site.url; %>">
 <meta property="og:title" content="<%= site.slogan; %> | <%= site.title; %>">
 <meta property="og:description" content="<%= site.description; %>">
 <meta property="og:image" content="<%= site.url; %>/images/hotel.jpg">
@@ -87,7 +87,7 @@ $(function(){
 	<script type="text/javascript" src="/javascripts/Backstretch.js"></script>
 	<script type="text/javascript" src="/javascripts/jquery.js"></script>
 	<script type="text/javascript" src="/javascripts/global.js"></script>
-	<footer class="blacken">Created by <a href="/" target="_blank">TripKOO</a> Background by <a href="http://www.landscapehdwalls.com" target="_blank" rel="nofollow">landscapehdwalls</a></footer>
+	<footer class="blacken">Created by <a href="/" target="_blank"><%= site.title; %></a> Background by <a href="http://www.landscapehdwalls.com" target="_blank" rel="nofollow">landscapehdwalls</a></footer>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -4,8 +4,8 @@ module.exports = {
 		connectionString: 'mongodb://localhost:27017/wisata',
 	},
 	site: {
-	    title: 'TripKOO',
-	    url: 'http://www.tripkoo.com',
+	    title: 'XplOOor',
+	    url: 'http://xplooor.com',
 	    slogan: 'Cari Paket Wisata di Seluruh Indonesia',
 	    description: 'Selamat datang di tripkoo. Cari dan temukan paket wisata terbaik dan termurah ke seluruh indonesia.',
 	    static_host: '/images'

@@ -3,7 +3,8 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,600);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
@@ -23,6 +24,7 @@ p {font-size:100%;}
 .no-bg-color {background-color: transparent;}
 .affiliate-widget {margin-bottom: 30px;}
 .sidebar {width:300px;float:right;}
+.navbar-brand {font-family: "Lobster Two",cursive}
 
 @media screen and (max-width: 400px) {
 	.list-title {margin-top: 20px;line-height: 30px;}
