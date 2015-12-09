@@ -5,10 +5,10 @@ module.exports = {
 	},
 	site: {
 	    title: 'XplOOor',
-	    url: 'http://xplooor.com',
-	    slogan: 'Cari Paket Wisata di Seluruh Indonesia',
-	    description: 'Cari dan temukan paket wisata terbaik dan termurah ke seluruh indonesia.',
-	    static_host: '/images'
+	    url: 'https://xplooor.com',
+	    slogan: 'Kunjungi Tempat Wisata Liburan Murah',
+	    description: 'Cari temukan objek wisata eksotis seluruh Indonesia yang wajib dikunjungi untuk destinasi liburan & tour anda hanya di XplooOr.com',
+	    static_host: 'https://xplooor.com/images'
 	},
 	folders: {
 		root_folder: '/var/www/domain.com/tripkoo',
