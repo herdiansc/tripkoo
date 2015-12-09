@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
         req.query.q = req.params.keyword;
         var canonical = config.site.url + req._parsedOriginalUrl.pathname;
     }
+    if(typeof req.query.q != 'undefined') req.query.q = req.query.q.replace('-',' ');
     var conditions = {
         title:new RegExp(req.query.q, 'i'),
         description:new RegExp(req.query.q, 'i')
