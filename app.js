@@ -30,9 +30,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// redirect trailing-slash
+app.use(function(req, res, next) {
+    if (req.path.substr(-1) == '/' && req.path.length > 1) {
+        var query = req.url.slice(req.path.length);
+        res.redirect(301, req.path.slice(0, -1) + query);
+    } else {
+        next();
+    }
+});                             
+
 app.use('/', routes);
 app.use('/users', users);
-app.use('/search', web_pages);
+app.use('/:url(search|paket-wisata)', web_pages);
 app.use('/paket-wisata/:keyword', web_pages);
 // app.get('/paket-wisata/:keyword',function(req,res){
 //     console.log(req.params);
@@ -79,6 +89,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
