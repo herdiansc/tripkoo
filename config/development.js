@@ -6,8 +6,8 @@ module.exports = {
 	site: {
 	    title: 'XplOOor',
 	    url: 'http://localhost:3000',
-	    slogan: 'Cari Paket Wisata di Seluruh Indonesia',
-	    description: 'Cari dan temukan paket wisata terbaik dan termurah ke seluruh indonesia.',
+	    slogan: 'Kunjungi Tempat Wisata Liburan Murah',
+	    description: 'Cari temukan objek wisata eksotis seluruh Indonesia yang wajib dikunjungi untuk destinasi liburan & tour anda hanya di XplOOor.com',
 	    static_host: '/images'
 	},
 	folders: {

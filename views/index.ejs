@@ -25,6 +25,7 @@ Note: Please use our back link in your site (webthemez.com)
 <meta property="og:image" content="<%= site.url; %>/images/xplooor_socmed_image.jpg">
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/css.css"> 
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"> 
 <!-- <link href="http://subditor.herokuapp.com/favicon.ico" type="image/x-icon" rel="icon">
 <link href="http://subditor.herokuapp.com/favicon.ico" type="image/x-icon" rel="shortcut icon"> -->
 <link rel="stylesheet" type="text/css" href="/stylesheets/home_styles.css">
@@ -39,32 +40,40 @@ Note: Please use our back link in your site (webthemez.com)
 		<div class="main-container">
 			<div class="wrapper">
 				<h1><%= site.title; %></h1>	
-				<h2 class="intro">Selamat datang di <span>XplOOor</span>. <%= site.description; %></h2>
-				<div id="socialIcons">
-					<ul> 
-						<li><a href="https://twitter.com/home?status=<%= site.description; %> <%= site.url; %>" title="Twitter" class="twitterIcon" target="_blank"></a></li>
-						<li><a href="https://www.facebook.com/sharer/sharer.php?u=<%= site.url; %>" title="facebook" class="facebookIcon" target="_blank"></a></li>
-					</ul>
-				</div>
+				<h2 class="intro site-desc">Selamat datang di <span>XplOOor</span>. <%= site.description; %></h2>
 				<center>
-					<a href="#subscribe" id="sync" class="scroll button learn-more orange-btn">Cari</a> atau 
-					<a href="/search" class="button learn-more orange-btn">Telusuri</a>
+					<a href="/search" class="button learn-more orange-btn">Cari</a> atau 
+					<a href="#subscribe" id="sync" class="scroll button learn-more orange-btn">Telusuri</a>
 				</center>
 			</div>
 		</div>
 	</div>
 	<div id="subscribe" class="relative wide-screen blacken">
-		<div class="main-container">
-		<h2 class="title">Mulai Pencarian Anda Dari Sini</h2>
-	<form action="/search" id="SubtitleIndexForm" method="get" accept-charset="utf-8">
-		<p>
-			<input name="q" placeholder="Masukkan Kata Kunci Misal Nama Tempat" class="time" id="SubtitleTime" type="text">		
-		</p>
-		<p>
-			<input value="Cari Paket Wisata Sekarang" type="submit">		
-		</p>
-	</form>
-	</div>
+		<div class="container popular-container main-container">
+			<div class="row">
+				<div class="col-sm-12"><h2 class="intro tempBy text-center">Pencarian Populer</h2></div>
+			</div>
+			<div class="row popular-row">
+				<div class="col-md-4 popular-item">
+					<a href="/paket-wisata/tidung" class="popular-label">
+						<img class="img-responsive" src="/images/popular/jembatan-cinta-pulau-tidung.jpg" />
+						<h3 class="intro">Pulau Tidung</h3>
+					</a>
+				</div>
+				<div class="col-md-4 popular-item">
+					<a href="/paket-wisata/lombok" class="popular-label">
+						<img class="img-responsive" src="/images/popular/lombok.jpg" />
+						<h3 class="intro">Lombok</h3>
+					</a>
+				</div>
+				<div class="col-md-4 popular-item">
+					<a href="/paket-wisata/bromo" class="popular-label">
+						<img class="img-responsive" src="/images/popular/bromo.jpg" />
+						<h3 class="intro">Gunung Bromo</h3>
+					</a>
+				</div>
+			</div>
+		</div>
 
 <script>
 $(function(){
