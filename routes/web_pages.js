@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     }else {
         var canonical = config.site.url + '/paket-wisata';
     }
-    if(typeof req.query.q != 'undefined') req.query.q = req.query.q.replace('-',' ');
+    if(typeof req.query.q != 'undefined') req.query.q = req.query.q.replace(/-/g,' ');
     var conditions = {
         title:new RegExp(req.query.q, 'i'),
         description:new RegExp(req.query.q, 'i')
