@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 */
 $( function() {
 // Add background image
-	$.backstretch('/images/peaceful-place.jpg');
+	$.backstretch('https://statics.xplooor.com/images/peaceful-place.jpg');
 	var endDate = "December  27, 2014 15:03:25";
 	$('.countdown.simple').countdown({ date: endDate });
 	$('.countdown.styled').countdown({

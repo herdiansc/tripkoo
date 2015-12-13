@@ -8,7 +8,7 @@ module.exports = {
 	    url: 'https://xplooor.com',
 	    slogan: 'Kunjungi Tempat Wisata Liburan Murah',
 	    description: 'Cari temukan objek wisata eksotis seluruh Indonesia yang wajib dikunjungi untuk destinasi liburan & tour anda hanya di XplOOor.com',
-	    static_host: 'https://xplooor.com/images'
+	    static_host: 'https://statics.xplooor.com'
 	},
 	folders: {
 		root_folder: '/var/www/domain.com/tripkoo',
