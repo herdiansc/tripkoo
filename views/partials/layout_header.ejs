@@ -9,7 +9,7 @@
     <meta name="description" content="Mau jalan jalan, dapatkan penawaran harga terbaik paket wisata<%= (q&&' '+q || '' ); %> untuk tour travel liburan murah meriah hanya di XplooOr.com">
     <meta name="author" content="">
 
-   <title>Harga Paket Wisata <%= (q&&q.charAt(0).toUpperCase() + q.slice(1) || '' ); %> | <%= site.title; %></title>
+   <title>Harga Paket Wisata <%= (q&&q.replace(/\b./g, function(m){ return m.toUpperCase(); }) || '' ); %> | <%= site.title; %></title>
     <% if(canonical) { %>
         <meta name="canonical" href="<%= canonical %>">
     <% } %>
