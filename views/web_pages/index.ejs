@@ -1,5 +1,21 @@
 <% include ../partials/layout_header %>
 <% include ../partials/layout_navigation %>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">Beranda</a></li>
+                    <% if (q) { %>
+                        <li><a href="/paket-wisata">Paket Wisata</a></li>
+                    <% }else { %>
+                        <li class="active">Paket Wisata</li>
+                    <% } %>
+                    <% if (q) { %>
+                        <li class="active"><%= q.replace(/\b./g, function(m){ return m.toUpperCase(); }) %></li>
+                    <% } %>
+                </ol>
+            </div>
+        </div>
 
         <!-- Page Search -->
         <div class="row">
