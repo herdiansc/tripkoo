@@ -30,8 +30,9 @@ Note: Please use our back link in your site (webthemez.com)
 <!-- <link href="http://subditor.herokuapp.com/favicon.ico" type="image/x-icon" rel="icon">
 <link href="http://subditor.herokuapp.com/favicon.ico" type="image/x-icon" rel="shortcut icon"> -->
 <link rel="stylesheet" type="text/css" href="<%= site.static_host %>/stylesheets/home_styles.css">
-<script src="<%= site.static_host %>/javascripts/analytics.js" async=""></script>
-<script type="text/javascript" src="<%= site.static_host %>/javascripts/jquery-1.js"></script>
+<!--<script src="<%= site.static_host %>/javascripts/analytics.js" async=""></script>-->
+<script async type="text/javascript" src="<%= site.static_host %>/javascripts/jquery-1.js"></script>
+<script type="text/javascript">var static_host = "<%= site.static_host %>";</script>
 </head>
 
 <body id="home">
@@ -121,9 +122,9 @@ Note: Please use our back link in your site (webthemez.com)
 <div id="overlay"></div>
 -->
 	<!--Scripts-->
-	<script type="text/javascript" src="<%= site.static_host %>/javascripts/Backstretch.js"></script>
-	<script type="text/javascript" src="<%= site.static_host %>/javascripts/jquery.js"></script>
-	<script type="text/javascript" src="<%= site.static_host %>/javascripts/global.js"></script>
+	<script async type="text/javascript" src="<%= site.static_host %>/javascripts/Backstretch.js"></script>
+	<!--<script type="text/javascript" src="<%= site.static_host %>/javascripts/jquery.js"></script>-->
+	<script async type="text/javascript" src="<%= site.static_host %>/javascripts/global.js"></script>
 	<footer class="blacken">Created by <a href="/" target="_blank"><%= site.title; %></a> Background by <a href="http://www.landscapehdwalls.com" target="_blank" rel="nofollow">landscapehdwalls</a></footer>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
