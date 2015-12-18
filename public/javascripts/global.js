@@ -1,5 +1,4 @@
 $( function() {
-// Add background image
 	$.backstretch(static_host+'/images/peaceful-place.jpg');
 
 	$("a.scroll").click(function(e) {

@@ -18,6 +18,11 @@ body {
 	margin:0;
 	background-size:cover;
 }
+body {
+    background-image:url('../images/peaceful-place-thumb.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);	
 }
