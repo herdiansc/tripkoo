@@ -16,18 +16,8 @@ body {
 	height:100%;
 	width:100%;
 	margin:0;
+	background-color: #e67e22 ;
 	background-size:cover;
-}
-body {
-    background: url('../images/peaceful-place-thumb.jpg') no-repeat center center fixed; 
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
 }
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);	
