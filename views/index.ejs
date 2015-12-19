@@ -35,6 +35,24 @@ Note: Please use our back link in your site (webthemez.com)
 </head>
 
 <body id="home">
+	<input type="hidden" id="background" value="<%= site.static_host %>/images/peaceful-place.jpg" />
+	<script type="text/javascript">
+	function changeBackground() {
+		var currentTime = new Date().getHours();
+		var background = document.getElementById('background');
+		if (6 <= currentTime&&currentTime < 16) {
+			var image = static_host+'/images/traveler-suasana-siang.jpg';
+		}
+		if (16 <= currentTime&&currentTime < 20) {
+			var image = static_host+'/images/traveler-suasana-sore.jpg';
+		}
+		if (20 <= currentTime || currentTime < 6) {
+			var image = static_host+'/images/traveler-suasana-malam.jpg';
+		}
+		background.value = image;
+	}
+	changeBackground();
+	</script>
 	<div class="notification">
 			</div>
 	<div id="Header" class="wide-screen">
