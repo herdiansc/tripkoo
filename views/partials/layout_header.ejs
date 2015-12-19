@@ -1,3 +1,4 @@
+<% include ../helpers/functions.ejs %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +7,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mau jalan jalan, dapatkan penawaran harga terbaik paket wisata<%= (q&&' '+q || '' ); %> untuk tour travel liburan murah meriah hanya di XplooOr.com">
+    <meta name="description" content="Mau jalan jalan, dapatkan penawaran harga terbaik paket wisata<%= (q&&' '+q || '' ); %> untuk tour travel liburan murah meriah hanya di XplOOor.com<%= current_page(web_pages.prevPage,web_pages.nextPage) %>">
     <meta name="author" content="">
 
-   <title>Harga Paket Wisata <%= (q&&q.replace(/\b./g, function(m){ return m.toUpperCase(); }) || '' ); %> | <%= site.title; %></title>
+   <title>Harga Paket Wisata <%= (q&&q.replace(/\b./g, function(m){ return m.toUpperCase(); }) || '' ); %><%= current_page(web_pages.prevPage,web_pages.nextPage) %> | <%= site.title; %></title>
     <% if(canonical) { %>
         <meta name="canonical" href="<%= canonical %>">
     <% } %>
-<link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="icon">
-<link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="shortcut icon">
+    <% if (web_pages.prevPage) { %>
+        <link rel="prev" href="<%= site.url %>/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.prevPage %>" />
+    <% } %>
+    <% if( web_pages.nextPage ) { %>
+        <link rel="next" href="<%= site.url %>/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>" />
+    <% } %>
+    <link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="icon">
+    <link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="shortcut icon">
 
-<meta name="google-site-verification" content="n4fm6V7dOSJG2k3nRqTxFAVZLyVbT0zLAY3DqQzSBfc" />	
+    <meta name="google-site-verification" content="n4fm6V7dOSJG2k3nRqTxFAVZLyVbT0zLAY3DqQzSBfc" />	
     <!-- Bootstrap Core CSS -->
     <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/flat-ui.min.css' />

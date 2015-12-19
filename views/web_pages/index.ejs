@@ -1,5 +1,7 @@
 <% include ../partials/layout_header %>
 <% include ../partials/layout_navigation %>
+
+<% include ../helpers/functions.ejs %>
         
         <div class="row">
             <div class="col-md-12">
@@ -72,10 +74,10 @@
                         <nav>
                           <ul class="pager no-border">
                             <% if (web_pages.prevPage) { %>
-                            <li class="previous"><a href="/search?q=<%= q; %>&page=<%= web_pages.prevPage %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
+	                           <li class="previous"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.prevPage %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
                             <% } %>
                             <% if( web_pages.nextPage ) { %>
-                            <li class="next"><a href="/search?q=<%= q; %>&page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>
+        	                    <li class="next"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>
                             <% } %>
                           </ul>
                         </nav>
