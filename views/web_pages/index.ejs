@@ -58,7 +58,7 @@
                             <h3 class="list-title"><%= web_pages.documents[i].title; %></h3>
                             <h4 class="list-sub-title"><%= web_pages.documents[i].price; %></h4>
                             <p><%= web_pages.documents[i].description; %></p>
-                            <a class="btn btn-primary" href="<%= web_pages.documents[i].url; %>" rel="nofollow" target="_blank">Buka Situs</a>
+                            <a title="Lihat paket wisata lebih lengkap" class="btn btn-primary" href="<%= web_pages.documents[i].url; %>" rel="nofollow" target="_blank">Buka Situs</a>
                         </div>
                     </div>
                 </div>
@@ -72,10 +72,10 @@
                         <nav>
                           <ul class="pager no-border">
                             <% if (web_pages.prevPage) { %>
-                            <li class="previous"><a href="/paket-wisata/<%= q; %>/<%= web_pages.prevPage %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
+                            <li class="previous"><a href="/search?q=<%= q; %>&page=<%= web_pages.prevPage %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
                             <% } %>
                             <% if( web_pages.nextPage ) { %>
-                            <li class="next"><a href="/paket-wisata/<%= q; %>/<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>
+                            <li class="next"><a href="/search?q=<%= q; %>&page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>
                             <% } %>
                           </ul>
                         </nav>
