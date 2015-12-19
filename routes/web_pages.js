@@ -9,10 +9,11 @@ router.get('/', function(req, res, next) {
     var canonical = null;
     if( req.params.keyword != null ) {
         req.query.q = req.params.keyword;
-        var canonical = config.site.url + req._parsedOriginalUrl.pathname;
-    }else {
-        var canonical = config.site.url + '/paket-wisata';
+        //var canonical = config.site.url + req._parsedOriginalUrl.pathname;
     }
+    // else {
+    //     var canonical = config.site.url + '/paket-wisata';
+    // }
     if(typeof req.query.q != 'undefined') req.query.q = req.query.q.replace(/-/g,' ');
     var conditions = {
         title:new RegExp(req.query.q, 'i'),
