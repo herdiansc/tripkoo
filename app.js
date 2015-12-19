@@ -33,6 +33,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // redirect trailing-slash
 app.use(function(req, res, next) {
+    app.disable( 'x-powered-by' );
+    res.setHeader( 'X-Powered-By', 'Marmot v0.2' );
+    res.setHeader( 'X-Served-By', 'Asih v2.6' );
+    res.setHeader( 'X-Core-Mission', 'Babantos tukang jalan-jalan' );
+
     if (req.path.substr(-1) == '/' && req.path.length > 1) {
         var query = req.url.slice(req.path.length);
         res.redirect(301, req.path.slice(0, -1) + query);
