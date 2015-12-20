@@ -25,20 +25,16 @@
 </head>
 
 <body id="home">
-	<input type="hidden" id="background" value="<%= site.static_host %>/images/peaceful-place.jpg" />
+	<input type="hidden" id="background" value="<%= site.static_host %>/images/paket-wisata-alam-18-24.jpg" />
 	<script type="text/javascript">
 	function changeBackground() {
 		var currentTime = new Date().getHours();
 		var background = document.getElementById('background');
-		if (6 <= currentTime&&currentTime < 16) {
-			var image = static_host+'/images/traveler-suasana-siang.jpg';
-		}
-		if (16 <= currentTime&&currentTime < 20) {
-			var image = static_host+'/images/traveler-suasana-sore.jpg';
-		}
-		if (20 <= currentTime || currentTime < 6) {
-			var image = static_host+'/images/traveler-suasana-malam.jpg';
-		}
+		if (5 <= currentTime&&currentTime < 8) var image = static_host+'/images/paket-wisata-alam-5-8.jpg';
+		if (8 <= currentTime&&currentTime < 10) var image = static_host+'/images/paket-wisata-alam-8-10.jpg';
+		if (10 <= currentTime&&currentTime < 17) var image = static_host+'/images/paket-wisata-alam-10-17.jpg';
+		if (17 <= currentTime&&currentTime < 18) var image = static_host+'/images/paket-wisata-alam-17-18.jpg';
+		if (18 <= currentTime&&currentTime < 19) var image = static_host+'/images/paket-wisata-alam-18-19.jpg';
 		background.value = image;
 	}
 	changeBackground();
