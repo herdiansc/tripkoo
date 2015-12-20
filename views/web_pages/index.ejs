@@ -74,7 +74,7 @@
                         <nav>
                           <ul class="pager no-border">
                             <% if (web_pages.prevPage) { %>
-	                           <li class="previous"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.prevPage %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
+	                           <li class="previous"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %><%= ( web_pages.prevPage>1&&'?page='+web_pages.prevPage||'' ) %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
                             <% } %>
                             <% if( web_pages.nextPage ) { %>
         	                    <li class="next"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>

@@ -15,7 +15,7 @@
         <meta name="canonical" href="<%= canonical %>">
     <% } %>
     <% if (web_pages.prevPage) { %>
-        <link rel="prev" href="<%= site.url %>/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.prevPage %>" />
+        <link rel="prev" href="<%= site.url %>/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %><%= ( web_pages.prevPage>1&&'?page='+web_pages.prevPage||'' ) %>" />
     <% } %>
     <% if( web_pages.nextPage ) { %>
         <link rel="next" href="<%= site.url %>/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>" />
