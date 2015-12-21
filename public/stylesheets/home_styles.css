@@ -16,16 +16,16 @@ body {
 	height:100%;
 	width:100%;
 	margin:0;
-	background-color: #e67e22 ;
+	background-color: #7f8c8d ;
 	background-size:cover;
 
-	-webkit-animation: pulse 5s infinite alternate;
+	/*-webkit-animation: pulse 5s infinite alternate;*/
 }
-@-webkit-keyframes pulse {
+/*@-webkit-keyframes pulse {
       0% {background-color: #7f8c8d;}
      50% {background-color: #34495e;}
      100% {background-color: #7f8c8d;}
-}
+}*/
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);	
 }

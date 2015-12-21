@@ -30,11 +30,12 @@
 	function changeBackground() {
 		var currentTime = new Date().getHours();
 		var background = document.getElementById('background');
-		if (5 <= currentTime&&currentTime < 8) var image = static_host+'/images/paket-wisata-alam-5-8.jpg';
-		if (8 <= currentTime&&currentTime < 10) var image = static_host+'/images/paket-wisata-alam-8-10.jpg';
-		if (10 <= currentTime&&currentTime < 17) var image = static_host+'/images/paket-wisata-alam-10-17.jpg';
-		if (17 <= currentTime&&currentTime < 18) var image = static_host+'/images/paket-wisata-alam-17-18.jpg';
-		if (18 <= currentTime&&currentTime < 19) var image = static_host+'/images/paket-wisata-alam-18-19.jpg';
+		var image = static_host+'/images/paket-wisata-alam-19-24.jpg';
+		if (5 <= currentTime&&currentTime < 8) image = static_host+'/images/paket-wisata-alam-5-8.jpg';
+		if (8 <= currentTime&&currentTime < 10) image = static_host+'/images/paket-wisata-alam-8-10.jpg';
+		if (10 <= currentTime&&currentTime < 17) image = static_host+'/images/paket-wisata-alam-10-17.jpg';
+		if (17 <= currentTime&&currentTime < 18) image = static_host+'/images/paket-wisata-alam-17-18.jpg';
+		if (18 <= currentTime&&currentTime < 19) image = static_host+'/images/paket-wisata-alam-18-19.jpg';
 		background.value = image;
 	}
 	changeBackground();
