@@ -1,24 +1,29 @@
 <% include ../partials/layout_header %>
 <% include ../partials/layout_navigation %>
-
 <% include ../helpers/functions.ejs %>
-    <!-- Page Content -->
-    <div class="container">        
-        <div class="row">
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><a href="/">Beranda</a></li>
-                    <% if (q) { %>
-                        <li><a href="/paket-wisata">Paket Wisata</a></li>
-                    <% }else { %>
-                        <li class="active">Paket Wisata</li>
-                    <% } %>
-                    <% if (q) { %>
-                        <li class="active"><%= q.replace(/\b./g, function(m){ return m.toUpperCase(); }) %></li>
-                    <% } %>
-                </ol>
+
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Beranda</a></li>
+                        <% if (q) { %>
+                            <li><a href="/paket-wisata">Paket Wisata</a></li>
+                        <% }else { %>
+                            <li class="active">Paket Wisata</li>
+                        <% } %>
+                        <% if (q) { %>
+                            <li class="active"><%= q.replace(/\b./g, function(m){ return m.toUpperCase(); }) %></li>
+                        <% } %>
+                    </ol>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">        
 
         <!-- Page Search -->
         <div class="row">

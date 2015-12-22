@@ -34,6 +34,19 @@
 
     <% include partials/layout_navigation %>
 
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Beranda</a></li>
+                        <li class="active">Tentang Kami</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Full Width Image Header -->
     <header class="header-image" style="background: url('<%= site.static_host %>/images/tentang-kami-xplooor.com.jpg') no-repeat center center scroll">
         <div class="headline">
@@ -42,17 +55,8 @@
             </div>
         </div>
     </header>
-
     <!-- Page Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><a href="/">Beranda</a></li>
-                    <li class="active">Tentang Kami</li>
-                </ol>
-            </div>
-        </div>
         <hr class="featurette-divider">
 
          <div class="featurette" style="text-align:center;">
@@ -74,8 +78,8 @@
 
         <!-- First Featurette -->
         <div class="featurette" id="about">
-            <img class="featurette-image img-responsive pull-right img-circle" src="<%= site.static_host %>/images/destinasi-wisata.jpg" alt="Temukan destinasi wisata dengan mudah">
-            <h2 class="featurette-heading">Temukan destinasi wisata
+            <img class="featurette-image img-responsive pull-right img-circle pull-center-mobile" src="<%= site.static_host %>/images/destinasi-wisata.jpg" alt="Temukan destinasi wisata dengan mudah">
+            <h2 class="featurette-heading featurette-center">Temukan destinasi wisata
                 <span class="text-muted">dengan mudah</span>
             </h2>
             <p class="lead"><a href="/">XplOOor.com</a> menyediakan berbagai daftar paket wisata ke berbagai destinasi baik itu domestik maupun mancanegara. Anda cukup melakukan pencarian di halaman <a href="/paket-wisata">ini</a> untuk menemukan destinasi yang cocok dengan rencana liburan anda.</p>
@@ -85,8 +89,8 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services">
-            <img class="featurette-image img-responsive pull-left img-circle" src="<%= site.static_host %>/images/harga-paket-wisata.jpg" alt="Temukan harga paket wisata terbaik">
-            <h2 class="featurette-heading">Temukan harga paket wisata
+            <img class="featurette-image img-responsive pull-left img-circle pull-center-mobile" src="<%= site.static_host %>/images/harga-paket-wisata.jpg" alt="Temukan harga paket wisata terbaik">
+            <h2 class="featurette-heading featurette-center">Temukan harga paket wisata
                 <span class="text-muted">terbaik</span>
             </h2>
             <p class="lead">Di <a href="/">XplOOor.com</a> anda juga akan menemukan informasi harga untuk masing-masing paket wisata yang anda cari. Anda bisa membandingkan harga dari masing-masing paket wisata sehingga anda akan menemukan paket wisata yang cocok dengan budget anda.</p>
