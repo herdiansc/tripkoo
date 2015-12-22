@@ -1,0 +1,97 @@
+<% include helpers/functions.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="XplOOor.com adalah pengumpul informasi untuk para traveler guna mendapatkan pilihan tepat destinasi wisata. Sangat memungkinkan untuk bisa menemukan objek wisata, destinasi liburan, paket tour dan berbagai macam informasi travel">
+    <meta name="author" content="">
+
+   <title>Tentang Kami | <%= site.title; %></title>
+
+    <link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="icon">
+    <link href="<%= site.static_host %>/favicon.ico?v=1" type="image/x-icon" rel="shortcut icon">
+
+    <meta name="google-site-verification" content="n4fm6V7dOSJG2k3nRqTxFAVZLyVbT0zLAY3DqQzSBfc" />  
+    <!-- Bootstrap Core CSS -->
+    <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/flat-ui.min.css' />
+    <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/1-col-portfolio.css' />
+    <link rel='stylesheet' href='<%= site.static_host %>/stylesheets/one-page-wonder.css' />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <% include partials/layout_navigation %>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image" style="background: url('<%= site.static_host %>/images/tentang-kami-xplooor.com.jpg') no-repeat center center scroll">
+        <div class="headline">
+            <div class="container">
+                <h1><%= title %></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">Beranda</a></li>
+                    <li class="active">Tentang Kami</li>
+                </ol>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+
+         <div class="featurette" style="text-align:center;">
+            <h2 class="featurette-heading">Apakah itu 
+                <span class="text-muted"><a href="/">XplOOor.com</a>?</span>
+            </h2>
+            <p class="lead">
+<a href="/">XplOOor.com</a> adalah pengumpul informasi untuk para traveler guna mendapatkan pilihan tepat destinasi wisata. Sangat memungkinkan untuk bisa menemukan objek wisata, destinasi liburan, paket tour dan berbagai macam informasi travel. Didirikan pada tanggal 08 Desember 2015 berdasarkan ketertarikan, pengetahuan, rasa ingin berbagi. Seluruh data XplOOor bersumber dari situs-situs wisata di Indonesia.
+            </p>
+            <p class="lead">
+                Pengunjung tidak perlu mendaftar untuk menggunakan layanan XplOOor
+            </p>
+            <p class="lead">
+                Kehadiran XplOOor bisa menjadi alternatif terbaik & orientasi utama pelancong yang ingin berkunjung ke destinasi wisata yang memikat.
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-responsive pull-right img-circle" src="<%= site.static_host %>/images/destinasi-wisata.jpg" alt="Temukan destinasi wisata dengan mudah">
+            <h2 class="featurette-heading">Temukan destinasi wisata
+                <span class="text-muted">dengan mudah</span>
+            </h2>
+            <p class="lead"><a href="/">XplOOor.com</a> menyediakan berbagai daftar paket wisata ke berbagai destinasi baik itu domestik maupun mancanegara. Anda cukup melakukan pencarian di halaman <a href="/paket-wisata">ini</a> untuk menemukan destinasi yang cocok dengan rencana liburan anda.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+            <img class="featurette-image img-responsive pull-left img-circle" src="<%= site.static_host %>/images/harga-paket-wisata.jpg" alt="Temukan harga paket wisata terbaik">
+            <h2 class="featurette-heading">Temukan harga paket wisata
+                <span class="text-muted">terbaik</span>
+            </h2>
+            <p class="lead">Di <a href="/">XplOOor.com</a> anda juga akan menemukan informasi harga untuk masing-masing paket wisata yang anda cari. Anda bisa membandingkan harga dari masing-masing paket wisata sehingga anda akan menemukan paket wisata yang cocok dengan budget anda.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+<% include partials/layout_footer %>

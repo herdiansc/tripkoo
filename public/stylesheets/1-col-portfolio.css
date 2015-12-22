@@ -33,3 +33,9 @@ p {font-size:100%;}
 
 .navbar {margin-bottom:0 !important;}
 .breadcrumb {border-radius:0 !important;}
+.navbar-inverse {background-color: white !important;}
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav>li>a {color: #34495e;}
+.navbar-toggle {background-color: #34495e !important;}
+.navbar-toggle:focus {background-color: transparent !important;}
+.navbar-inverse .navbar-collapse {border-top:1px solid #eee !important;}
