@@ -6,7 +6,7 @@ slugify = function(text) {
 current_page = function(prev_page,next_page) {
 	if(next_page && next_page>2) {
 		return " - Halaman "+(next_page-1);
-	}else if(prev_page && prev_page>1){
+	}else if(prev_page){
 		return " - Halaman "+(prev_page+1);
 	}else {
 		return null;
