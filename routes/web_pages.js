@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
 
     WebPage.findPaginated(conditions,function(err, web_pages){
         res.render('web_pages/index', { web_pages:web_pages, q: q, canonical:canonical  });
-    },limit,currentPage).sort({_id:-1});
+    },limit,currentPage).sort({last_updated:-1});
 });
 
 router.get('/img', function(req, res, next){
