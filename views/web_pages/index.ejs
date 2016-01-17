@@ -93,14 +93,14 @@
                 <div class="row text-center">
                     <div class="col-lg-12">
                         <nav>
-                          <ul class="pager no-border">
+                          <div class="pager no-border">
                             <% if (web_pages.prevPage) { %>
-	                           <li class="previous"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %><%= ( web_pages.prevPage>1&&'?page='+web_pages.prevPage||'' ) %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></li>
+	                           <div class="previous"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %><%= ( web_pages.prevPage>1&&'?page='+web_pages.prevPage||'' ) %>"><span aria-hidden="true">&larr;</span> Sebelumnya</a></div>
                             <% } %>
                             <% if( web_pages.nextPage ) { %>
-        	                    <li class="next"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></li>
+        	                    <div class="next"><a href="/paket-wisata<%= (q&&'/'+slugify(q) || '' ); %>?page=<%= web_pages.nextPage %>">Selanjutnya <span aria-hidden="true">&rarr;</span></a></div>
                             <% } %>
-                          </ul>
+                          </div>
                         </nav>
                     </div>
                 </div>

@@ -68,3 +68,11 @@ p {font-size:100%;}
 .result-wrapper {padding-top:20px;background-color: #F5F5F5;}
 .footer-wrapper {border-top: 1px solid #dedede;}
 .image-wrapper {width:165px;height:110px;overflow:hidden;}
+
+.pager {background-color: transparent !important;width:100%;}
+.pager .previous,
+.pager .next {background-color: #34495E;padding:5px;}
+.pager .previous a,
+.pager .next a {color: white;}
+.pager .previous {float:left;}
+.pager .next {float:right;}
