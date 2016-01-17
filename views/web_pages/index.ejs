@@ -22,51 +22,48 @@
         </div>
     </div>
 
-    <!-- Page Content -->
-    <div class="container">        
-
-        <!-- Page Search -->
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="page-header">Paket wisata<%= (q&&' '+q || '' ); %></h1>
-            <form action="/search" method="GET">
-            <div class="input-group">
-                    <input type="text" class="form-control no-border" placeholder="Search for..." name="q" value="<%= q; %>">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default no-border" type="submit">CARI</button>
-                    </span>
-                
-            </div><!-- /input-group -->
-            </form>
-            <style type="text/css">.popular-search {margin-bottom:10px;}</style>
-            <div class="row popular-search-wrapper">
-                <div class="col-md-3">
-                    <span class="popular-search-header">Pencarian Populer</span>
-                </div>
-                <div class="col-md-9">
-                    <div class="row popular-search-items">
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/open-trip">Open Trip</a></div>
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/murah">Murah</a></div>
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/honeymoon">Honeymoon</a></div>
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/promo">Promo</a></div>
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/adventure">Adventure</a></div>
-                        <div class="col-md-3 popular-search"><a href="/paket-wisata/backpacker">Backpacker</a></div><div class="col-md-3 popular-search"><a href="/paket-wisata/bangkok">Bangkok</a></div><div class="col-md-3 popular-search"><a href="/paket-wisata/rafting">Rafting</a></div>
+    <div class="search-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">Paket wisata<%= (q&&' '+q || '' ); %></h1>
+                    <form action="/search" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control no-border" placeholder="Masukkan kata kunci atau nama tempat" name="q" value="<%= q; %>">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default no-border" type="submit">CARI</button>
+                            </span>
+                        </div> 
+                    </form>
+                    <div class="row popular-search-wrapper">
+                        <div class="col-md-3">
+                            <span class="popular-search-header">Pencarian Populer</span>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row popular-search-items">
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/open-trip">Open Trip</a></div>
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/murah">Murah</a></div>
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/honeymoon">Honeymoon</a></div>
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/promo">Promo</a></div>
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/adventure">Adventure</a></div>
+                                <div class="col-md-3 popular-search"><a href="/paket-wisata/backpacker">Backpacker</a></div><div class="col-md-3 popular-search"><a href="/paket-wisata/bangkok">Bangkok</a></div><div class="col-md-3 popular-search"><a href="/paket-wisata/rafting">Rafting</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-        <!-- /.row -->
 
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="list-header">Daftar paket wisata<%= (q&&' '+q || '' ); %></h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="list-header">Daftar paket wisata<%= (q&&' '+q || '' ); %></h2>
+                </div>
             </div>
         </div>
-        <!-- /.row -->
+    </div>
 
-        <hr>
+    <!-- Page Content -->
+    <div class="result-wrapper">
+    <div class="container">        
 
         <!-- Project One -->
         <div class="row">
@@ -76,7 +73,9 @@
                 <div class="list">
                     <div class="row">
                         <div class="col-sm-3">
+                            <div class="image-wrapper">
                             <img class="img-responsive" src="<%= site.static_host %>/images/images/<%= web_pages.documents[i]._id; %>.jpg" alt="<%= web_pages.documents[i].title; %>" onerror='this.src="/search/img?id=<%= web_pages.documents[i]._id %>&src=<%= web_pages.documents[i].image %>";' data-id="<%= web_pages.documents[i]._id; %>" data-img-original="<%= site.static_host %>/images/<%= web_pages.documents[i]._id; %>.jpg">
+                            </div>
                         </div>
                         <div class="col-sm-9">
                             <h3 class="list-title"><%= web_pages.documents[i].title; %></h3>
@@ -111,7 +110,7 @@
             <% include ../partials/sidebar %>
         </div>
         <!-- /.row -->
-
-        <hr>
+        </div>
+        </div>
 
 <% include ../partials/layout_footer %>
