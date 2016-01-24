@@ -36,6 +36,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/img', function(req, res, next){
     var request = require("request");
+    var easyimg = require('easyimage');
 
     var query = req.query;
 
@@ -45,7 +46,14 @@ router.get('/img', function(req, res, next){
         console.log(err)
       }).on('response',function(res){
         if( res.statusCode >= 200 && res.statusCode < 300 ) {
-            req.pipe(fs.createWriteStream(config.folders.static_folder+'/images/'+ query.id +".jpg"));
+            var imageLocation = config.folders.static_folder+'/images/'+ query.id +".jpg";
+            var save = req.pipe(fs.createWriteStream(imageLocation));
+            save.on('finish',function(){
+                easyimg.rescrop({
+                    src:imageLocation, dst:imageLocation,
+                    width:165, height:110, fill:true
+                });
+            });
         }
       });
 
