@@ -16,7 +16,8 @@ footer {
 body {font-size: 15px;}
 p {font-size:100%;}
 .page-header {font-size:200%;font-weight: normal;text-transform: capitalize;}
-.list-header {font-size: 160%;font-weight: normal;text-transform: capitalize;}
+.list-header {font-size: 160%;font-weight: normal;text-transform: capitalize;display:inline-block;margin-right:10px;}
+.search-result {color:#777;}
 .list-title{font-size: 140%;margin-top:0px;font-weight: normal;}
 .list-sub-title{font-size: 115%;font-weight: normal;}
 .btn {border-radius: 0;}
@@ -29,6 +30,7 @@ p {font-size:100%;}
 @media screen and (max-width: 400px) {
 	.list-title {margin-top: 20px;line-height: 30px;}
 	.sidebar {float:none;margin: 0 auto;}
+    .search-result {display: none;}
 }
 .popular-search-wrapper {margin:30px 0px;}
 .popular-search-header {font-size: 18px;margin:0px 0px 15px -15px;display: block;}
