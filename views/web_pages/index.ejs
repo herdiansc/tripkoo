@@ -56,7 +56,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="list-header">Daftar paket wisata<%= (q&&' '+q || '' ); %></h2>
-                    <span class="search-result">(sekitar <%= web_pages.totalPages*10 %> hasil pencarian)</span>
+                    <% if(web_pages.totalPages>1) { %>
+                        <span class="search-result">(ditemukan lebih dari <%= (web_pages.totalPages-1)*10 %> hasil pencarian)</span>
+                    <% } %>
                 </div>
             </div>
         </div>
