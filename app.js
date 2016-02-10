@@ -16,6 +16,7 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var web_pages = require('./routes/web_pages');
+var details = require('./routes/details');
 
 app.locals.site = config.site;
 
@@ -50,6 +51,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/:url(search|paket-wisata)', web_pages);
 app.use('/paket-wisata/:keyword', web_pages);
+app.use('/:situs/:slug', details);
 // app.get('/paket-wisata/:keyword',function(req,res){
 //     console.log(req.params);
 //     res.send("OK");

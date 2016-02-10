@@ -84,7 +84,11 @@
                             <h3 class="list-title"><%= web_pages.documents[i].title; %></h3>
                             <h4 class="list-sub-title"><%= web_pages.documents[i].price; %></h4>
                             <p><%= web_pages.documents[i].description; %></p>
-                            <a title="Lihat paket wisata lebih lengkap" class="btn btn-primary" href="<%= web_pages.documents[i].url; %>" rel="nofollow" target="_blank">Detail Paket Wisata</a>
+                            <% if (web_pages.documents[i].situs && web_pages.documents[i].slug) { %>
+                                <a title="Lihat paket wisata lebih lengkap" class="btn btn-primary" href="<%= web_pages.documents[i].situs; %>/<%= web_pages.documents[i].slug; %>">Detail Paket Wisata</a>
+                            <% }else { %>
+                                <a title="Lihat paket wisata lebih lengkap" class="btn btn-primary" href="<%= web_pages.documents[i].url; %>" rel="nofollow" target="_blank">Detail Paket Wisata</a>
+                            <% } %>
                         </div>
                     </div>
                 </div>

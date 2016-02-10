@@ -6,6 +6,9 @@ var webPageSchema = mongoose.Schema({
 	price: String,
 	status: String,
 	image: String,
+	situs: String,
+	slug: String,
+	detail: String,
 },{
 	collection:'web_pages'
 });

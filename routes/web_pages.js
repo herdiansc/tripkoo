@@ -9,14 +9,8 @@ router.get('/', function(req, res, next) {
     var canonical = null;
     if( req.params.keyword != null ) {
         req.query.q = req.params.keyword;
-        var canonical = null;//config.site.url + req._parsedOriginalUrl.pathname;
-    }
-     else {
-//	if(typeof req.query.q != 'undefined') {
-//		var uri = '/paket-wisata/'.req.query.q
-//	}else {
-	
-//	}
+        var canonical = null;
+    }else {
          var canonical = config.site.url + '/paket-wisata';
      }
     if(typeof req.query.q != 'undefined') req.query.q = req.query.q.replace(/-/g,' ');
@@ -46,11 +40,12 @@ router.get('/img', function(req, res, next){
         console.log(err)
       }).on('response',function(res){
         if( res.statusCode >= 200 && res.statusCode < 300 ) {
-            var imageLocation = config.folders.static_folder+'/images/'+ query.id +".jpg";
+            var imageLocation = config.folders.static_folder+'/images/'+ query.id +"_original.jpg";
+            var imageThumbnailLocation = config.folders.static_folder+'/images/'+ query.id +".jpg";
             var save = req.pipe(fs.createWriteStream(imageLocation));
             save.on('finish',function(){
                 easyimg.rescrop({
-                    src:imageLocation, dst:imageLocation,
+                    src:imageLocation, dst:imageThumbnailLocation,
                     width:165, height:110, fill:true
                 });
             });
